@@ -3,35 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
     <title>QuickJavaQuiz</title>
 </head>
 <body>
 
-    <p id="countdown"></p>
+    
 
-    <a class="high-score" href="#">View High-Scores</a>
 
-    <div class="start-box" id="quizstart">
+    <div class="container" id="quizstart">
 
         <div class="title">
             <strong>QuickJavaQuiz</strong>
         </div>
 
 
-        <div class="start-list">
+        <div class="start-rules">
             <div class="line1">Try to answer each of the code related questions.</div>
-            <div class="line2">You'll have 1m and 15s to complete this Quiz.</div>
-            <div class="line3">Each incorrect answer will deduct your time and score.</div>
-            <div class="line4">After the quiz is over your score will display and you can enter your initals.</div>
+            <div class="line2">You'll have 1 minute to complete this Quiz.</div>
+            <div class="line3">Each incorrect answer will deduct your time by 10 seconds.</div>
+            <div class="line4">After the quiz is over your score will display and you can enter your initals in the leaderboard.</div>
             <div class="line5">Good luck!</div>
         </div>
         
-        <div class="startboxBtn"><button onclick="startQuiz()" class="start">Start Quiz</button> </div>
+        <div class="startboxBtn">
+            <a href="./quiz.html"><button id="startquizBtn">Start Quiz</button> 
+            <a href="./highscores.html"><button class="startboxBtn" id="highscoreBtn">High Scores</button></a>
+        </div>
 
 
     </div>
 
-    <script src="./script.js"></script>
+    
 </body>
 </html>
