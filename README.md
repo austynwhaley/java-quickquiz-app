@@ -3,7 +3,7 @@
 ### Table of Contents
 
 - [Description](#description)
-- [Link to Application](https://austynwhaley.github.io/password-generator-3000/)
+- [Link to Application](https://austynwhaley.github.io/java-quickquiz-app/)
 - [License](#license)
 
 ---
