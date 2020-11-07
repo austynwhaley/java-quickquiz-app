@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
+/*google font css*/
 *{
     margin: 0;
     padding: 0;
@@ -11,13 +11,24 @@ body{
     background-color: #242424;
 }
 
-
+/* all button hover css*/
 #high-score{
     color: whitesmoke;
     margin: 10px;
     padding: 20px;
     position: absolute;
 }
+.startboxBtn button:hover{
+    color: #242424;
+}
+
+#saveScoreBtn:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 #242424;
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
 
 #startquizBtn:hover{
     cursor: pointer;
@@ -39,6 +50,12 @@ body{
     transition: transform 150ms;
     transform: scale(1.03);
 }
+.choice-text:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 #242424;
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
 
 
 #countdown{
@@ -47,7 +64,7 @@ body{
     top: 15%;
     position: absolute;
 }
-
+/*main container css*/
 .container .title{
     height: 60px;
     font-size: 35px;
@@ -84,8 +101,16 @@ body{
     cursor: pointer; 
 }
 
-.startboxBtn button:hover{
-    color: #242424;
+#saveScoreBtn{
+    margin: 20px;
+    padding: 5px 15px;
+    font-size: 20px;
+    border: 5px;
+    color: indigo;
+    outline: none;
+    border-radius: 25px;
+    cursor: pointer; 
+
 }
 
 .choice-contaianer{
@@ -123,16 +148,33 @@ body{
     border-radius: 10px;
     
 }
-.choice-text:hover{
-    cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 #242424;
-    transition: transform 150ms;
-    transform: scale(1.03);
-}
+
 .choice-prefix{
     visibility: hidden;
 }
 .hud-prefix{
-    padding: 0;
+    padding: 0;    
+}
+h1 {
+    padding: 10px;
+    margin-top: 10px;
+}
+h2{
+    color: whitesmoke;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    font-size: 70px;
+}
+
+h3{
+    color: whitesmoke;
+    padding: 40px;
+    font-size: 25px;
+}
+
+input{
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 15px;
     
 }

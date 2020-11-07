@@ -7,28 +7,27 @@
     <title>QJQ Leaderboard</title>
 </head>
 <body>
-    <div class="container" id="quizstart">
 
-        <div class="title">
-            <strong>High Scores!</strong>
-        </div>
+    <script>
+        const highScoresList = document.querySelector('#highScoresList')
+        const highScores = JSON.parse(localStorage.getItem('highScores')) || []
 
-
-        <div class="score-list">
-            <ul>
-                <li>first score</li>
-                <li>second score</li>
-            </ul>
-            
-        </div>
+        highScoresList.innerHTML =
+        highScores.map(score => {
+            return `<li class"high-score'>${score.name} - ${score.score}<li>`
+        }).join('') 
         
+    </script>
+    <div class="container" id="quizstart">
+        <div class="title" id="finalScore">
+            <h1>High Scores</h1>
+        </div>
+
+        <ul id="scores-list"></ul>
+     
         <div class="startboxBtn"> 
            <a href="./index.html"><button class="startboxBtn" id="backtomenuBtn">Main Menu</button></a>
         </div>
-
-
-    </div>
-
-    <script src="./script.js"></script>
+    </div>  
 </body>
 </html>

@@ -56,20 +56,16 @@ var questions = [
 
 
 
- 
+
 // quiz timer
 var timer = setInterval(function(){
 
-    
-
     if(timeleft <= 0){
-      clearInterval(timer);
-      return window.location.assign('./highscores.html')  
-    } else{
-        document.getElementById("timer").innerHTML = timeleft;
-        
+        clearInterval(timer)
+        return window.location.assign('./endofquiz.html')  
+    } else { 
+        document.getElementById("timer").innerHTML = timeleft;   
     }
-    
     timeleft -= 1;
 }, 1000);
 
@@ -86,7 +82,7 @@ getNewQuestion = () => {
     if(avaiableQuestions.length === 0 ||questionCounter > maxQuestions) {
         localStorage.setItem('mostRecentScore', currentScore)
 
-        return window.location.assign('./highscores.html')
+        return window.location.assign('./endofquiz.html')
     }
 
     
@@ -104,7 +100,7 @@ getNewQuestion = () => {
 
     acceptedAnswers = true   
 };
-
+// for each method for the possible choices
 choices.forEach(choice =>{
     choice.addEventListener('click', e =>{
         if (!acceptedAnswers) return
@@ -133,10 +129,10 @@ choices.forEach(choice =>{
     });
 
 });
-
+//function that adds points to score
 incrementScore = num => {
     currentScore += num
-    scoreText.innerText = currentScore
+    scoreText.innerText = "Score: " + currentScore
 }
 
 
