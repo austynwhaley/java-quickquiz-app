@@ -70,22 +70,20 @@ var timer = setInterval(function(){
 }, 1000);
 
 //function that sets starting values
-function startGame(){
+function startQuiz(){
     currentScore = 0
     questionCounter = 0
     avaiableQuestions = [...questions]
     getNewQuestion()
 }
 
-//function that changes question and answers
+//function that changes question and choices
 getNewQuestion = () => {
     if(avaiableQuestions.length === 0 ||questionCounter > maxQuestions) {
         localStorage.setItem('mostRecentScore', currentScore)
 
         return window.location.assign('./endofquiz.html')
     }
-
-    
 
     const questionsIndex = Math.floor(Math.random() * avaiableQuestions.length)
     currentQuestion = avaiableQuestions[questionsIndex]
@@ -100,6 +98,7 @@ getNewQuestion = () => {
 
     acceptedAnswers = true   
 };
+
 // for each method for the possible choices
 choices.forEach(choice =>{
     choice.addEventListener('click', e =>{
@@ -137,8 +136,8 @@ incrementScore = num => {
 
 
 
-
-startGame();
+//calls to start the quiz
+startQuiz();
 
 
 

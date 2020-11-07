@@ -8,14 +8,18 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
 </head>
 <body>
+    <!--main container-->
     <div class="container">
         <div id="end" class="flex-center flex-column">
+            <!--score results-->
             <h1 id="finalScore">0</h1>
+            <!--entry form div with instructions-->
             <form class="end-form-container">
                 <div id="end-text">Enter your name below to save your score!</div>
                 <input type="text" name="name" id="username" placeholder="Enter your name">
                 <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)" disabled>Save</button>
             </form>
+            <!--navigation butons-->
             <div class="startboxBtn"> 
                 <a href="./index.html"><button class="startboxBtn" id="backtomenuBtn">Main Menu</button></a>
                 <a href="./highscores.html"><button class="startboxBtn" id="highscoreBtn">High Scores</button></a>

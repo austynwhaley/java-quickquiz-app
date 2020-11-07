@@ -8,9 +8,10 @@
     <title>QuickJavaQuiz</title>
 </head>
 <body>
-
+    <!--main container-->
     <div class="container">
         <div id="game" class="justify-center flex-column">
+            <!--timer and score count containers-->
             <div id="hud">
                 <div class="hud-item">
                     <p id="timer" class="hud-prefix"></p>
@@ -21,7 +22,9 @@
                     </p>
                 </div>
             </div>
+            <!--question div-->
             <div id="question">What is the answer to this question?</div>
+            <!--div for choice options-->
             <div class="choice-container">
                 <p class="choice-prefix">A</p>
                 <p class="choice-text" data-number="1">Choice 1</p>
@@ -39,12 +42,12 @@
                 <p class="choice-text" data-number="4">Choice 4</p>
             </div>
         </div>
+        <!--navigation buttons-->
         <div class="startboxBtn">
             <a href="./index.html"><button id="startquizBtn">Main Menu</button> 
             <a href="./highscores.html"><button class="startboxBtn" id="highscoreBtn">High Scores</button></a>
         </div>
     </div>
-
     <script src="./script.js"></script>
 </body>
 </html>

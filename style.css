@@ -122,6 +122,7 @@ body{
     font-size: 3rem;
     min-width: 80rem;
 }
+
 #question{
     color: whitesmoke;
     font-size: 25px;
@@ -152,26 +153,17 @@ body{
 .choice-prefix{
     visibility: hidden;
 }
+
 .hud-prefix{
     padding: 0;    
 }
+
 h1 {
     padding: 10px;
     margin-top: 10px;
 }
-h2{
-    color: whitesmoke;
-    margin-top: 45px;
-    margin-bottom: 45px;
-    font-size: 70px;
-}
 
-h3{
-    color: whitesmoke;
-    padding: 40px;
-    font-size: 25px;
-}
-
+/*endofquiz css*/
 input{
     padding: 0.5rem;
     border-radius: 10px;
