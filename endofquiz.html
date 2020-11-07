@@ -3,65 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
-    <title>QJQ Leaderboard</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
 </head>
 <body>
-
-    <script>
-        var finalScore = document.getElementById("score-value")
-        var mostRecentScore = document.querySelector('mostRecentScore')
-        var username = document.getElementById('username')
-        var saveScoreBtn = document.getElementById('saveScoreBtn')
-
-        var highScores = JSON.parse(localStorage.getItem('highScores')) || []
-
-        const maxHighScores = 5
-
-        finalScore.innerText = mostRecentScore
-
-        //prevents user from saving score without name
-        username.addEventListener('keyup', function(){
-            saveScoreBtn.disabled = !username.value
-        })
-
-        function saveHighScore(){
-            e.preventDefault()
-
-            const score = {
-                score: mostRecentScore,
-                name: username.value
-            }
-
-            highScores.push(score)
-
-            highScores.sort((a,b) => {
-                return b.score - a.score
-            })
-
-            highScores.splice(5)
-
-            localStorage.setItem('highScores', JSON.stringify(highScores))
-            window.location.assign('/')  
-        }
-        
-
-    </script>
-    <div class="container" id="quizstart">
-    
-        <form class="end-form-container">
-            <h3 id="end-text">Enter your name to save your score to the leaderboard!</h3>
-            <input type="text" name="name" id="username" placeholder="Enter your name">
-           <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)">Save</button>
-        </form>
-        
-        
-        <div class="startboxBtn"> 
-           <a href="./index.html"><button class="startboxBtn" id="backtomenuBtn">Main Menu</button></a>
-           <a href="./highscores.html"><button class="startboxBtn" id="highscoreBtn">High Scores</button></a>
+    <div class="container">
+        <div id="end" class="flex-center flex-column">
+            <h1 id="finalScore">0</h1>
+            <form class="end-form-container">
+                <div id="end-text">Enter your name below to save your score!</div>
+                <input type="text" name="name" id="username" placeholder="Enter your name">
+                <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)" disabled>Save</button>
+            </form>
+            <div class="startboxBtn"> 
+                <a href="./index.html"><button class="startboxBtn" id="backtomenuBtn">Main Menu</button></a>
+                <a href="./highscores.html"><button class="startboxBtn" id="highscoreBtn">High Scores</button></a>
+             </div>
         </div>
     </div>
-
-    
+    <script src="end.js"></script>
 </body>
 </html>

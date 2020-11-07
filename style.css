@@ -74,7 +74,7 @@ body{
 .container{
     line-height: 30px;
     position: absolute;
-    top: 35%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); 
     text-align: center;
@@ -175,6 +175,20 @@ h3{
 input{
     padding: 0.5rem;
     border-radius: 10px;
+    font-size: 15px;    
+}
+
+#finalScore{
+    color: whitesmoke;
+}
+#end-text{
+    color: whitesmoke;
     font-size: 15px;
-    
+}
+#highScoresList{
+    color: whitesmoke;
+    font-size: 20px;
+    padding: 40px;
+    list-style-type: none;
+
 }
